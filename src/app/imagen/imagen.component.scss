@@ -1,0 +1,16 @@
+ .imagen1{
+     width: 40%;
+     margin-top: 20%;
+     margin-left: 30%;
+ }
+   
+       
+  @media(min-width: 1000px) {
+    .imagen1{
+      width: 15%;
+      margin-top: 5%;
+      margin-left: 40%;
+ 
+    }
+  
+  }

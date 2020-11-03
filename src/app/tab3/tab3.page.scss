@@ -1,0 +1,19 @@
+.margin-button {
+    margin-left: 0%;
+    margin-top: 30%;
+} 
+
+.margin-label {
+    margin-left: 25%;
+}
+
+@media(min-width: 1000px) {
+    .margin-button{
+        margin-left: 12%;
+        margin-top:  10%;
+    }
+
+    .margin-label{
+        margin-left: 0%;
+    }
+}

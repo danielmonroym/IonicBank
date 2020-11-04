@@ -1,17 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="bancolombia" size="large">
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid fixed>
+    <ion-row>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-col size="12">
+        <app-imagen></app-imagen>
+      </ion-col>
+      <ion-col size="12">
+        <ion-title color="bluebanco" class="margin-label">Tipo de asesoría</ion-title>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item class="ion-margin-top">
+          <ion-label color="bluebanco">Seleccione el tipo de asesoría</ion-label>
+          <ion-select value="opciones" interface="action-sheet">
+          
+            <ion-select-option value="Persona Jurídica" >Tipo 1</ion-select-option>
+            <ion-select-option value="Nequi">Tipo 2</ion-select-option>
+            <ion-select-option value="Otros Bancos">Tipo 3</ion-select-option>
+            <ion-select-option value="Bancos Extranjeros">Tipo 4</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+     <ion-col size="12" offset="4">
+        <ion-button routerLink="/consignacion" color="bluebanco" class="margin-button">
+          Confirmar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

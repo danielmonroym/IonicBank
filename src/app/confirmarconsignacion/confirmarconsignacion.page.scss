@@ -4,13 +4,21 @@
     margin-left: 30%;
 }
   
+.margin-button {
+  margin-left: 2%;
+  margin-top: 1%;
+}
       
  @media(min-width: 1000px) {
    .imgqr{
      width: 15%;
-     margin-top: 5%;
-     margin-left: 40%;
+     margin-top: 0%;
+     margin-left: 44%;
 
    }
+   .margin-button{
+    margin-left: 14%;
+    //margin-top:  10%;
  
  }
+}

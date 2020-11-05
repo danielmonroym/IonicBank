@@ -1,5 +1,7 @@
 # IonicBank
-Project Structure
+## Project Structure
+
+```
 .
  ├── resources                    # Build files on the specific platforms (iOS, Android) and app icon + splash
  ├── src                          # This is where the app lives - *the main folder*
@@ -12,7 +14,10 @@ Project Structure
  ├── readme.md                    # Project description
  ├── tsconfig.json                # TypeScript configurations
  └── tslint.json                  # TypeScript linting options
-src directory
+```
+
+### src directory
+```
 .
    ├── ...
    ├── src                       
@@ -26,10 +31,12 @@ src directory
    |   ├── manifest.json          # Metadata for the app
    │   └── service-worker.js      # Cache configurations
    └── ...
-Start the project
+```
+## Start the project
 The project is started with the regular ionic commands.
 
-Run npm install to install all dependencies.
-Run ionic serve to start the development environment.
-To build the project run ionic build android or ionic build ios. In order for you to build an iOS app, you need to run on MacOS.
+1. Run `npm install` to install all dependencies.
+2. Run `ionic serve` to start the development environment.
+3. To build the project run `ionic build android` or `ionic build ios`. In order for you to build an iOS app, you need to run on MacOS.
+
 An alternative is to emulate the app on a device or upload it to the ionic cloud. From here you can download the ionic view app and use the app on all devices.

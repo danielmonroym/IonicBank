@@ -1,4 +1,6 @@
 # IonicBank
+It's an app to develop the "Proyecto Integrador 1" from Bancolombia, in the 2020-01 Semester of the "Universidad de Antioquia". 
+
 ## Project Structure
 
 ```

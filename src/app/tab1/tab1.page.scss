@@ -8,3 +8,11 @@
 .card{
     box-shadow: none !important;
 }
+
+@media(min-width: 1000px) {
+    .title{
+    
+      margin-left: 5%;
+    }
+  
+  }

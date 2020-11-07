@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="bancolombia" size="large">
+    <ion-title color="bluebanco">Asesoría</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col size="12">
+        <app-imagen></app-imagen>
+      </ion-col>
+      <ion-col size="12">
+        <ion-title color="bluebanco" class="ion-margin-top">Información de tu Asesoría</ion-title>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-top">
+     
+        <ion-item>
+          <ion-label position="floating" color="bluebanco">Input</ion-label>
+          <ion-input [(ngModel)]="qrData1"></ion-input>
+        </ion-item>
+        
+     
+      </ion-col>
+      <ion-col size="12" >
+     
+        <ion-item>
+          <ion-label position="floating" color="bluebanco">Input</ion-label>
+          <ion-input type="text" [(ngModel)]="qrData2"></ion-input>
+        </ion-item>
+        
+     
+      </ion-col>
+      <ion-col size="12">
+     
+        <ion-item>
+          <ion-label position="floating" color="bluebanco" >Input</ion-label>
+          <ion-input type="text" [(ngModel)]="qrData3"></ion-input>
+        </ion-item>
+        
+     
+      </ion-col>
+      <ion-col size="12">
+     
+        <ion-item>
+          <ion-label position="floating" color="bluebanco">Input</ion-label>
+          <ion-input type="text" [(ngModel)]="qrData4"></ion-input>
+        </ion-item>
+        
+      </ion-col>
+      <ion-col size="12" offset="4">
+        <ion-button (click)="getQRData()"color="bluebanco" class="margin-button" >
+          Confirmar
+        </ion-button>
+        <ion-button routerLink="/" color="bluebanco" >
+          Volver
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" offset="4">
+    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

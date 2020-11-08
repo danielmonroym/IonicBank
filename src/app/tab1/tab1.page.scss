@@ -8,3 +8,13 @@
 .card{
     box-shadow: none !important;
 }
+
+.error-message {
+    color: var(--ion-color-danger);
+}
+
+.mask-password {
+    -webkit-text-security: disc;
+    -moz-webkit-text-security: disc;
+    -moz-text-security: disc;
+}

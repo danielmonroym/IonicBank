@@ -9,10 +9,14 @@
     box-shadow: none !important;
 }
 
-@media(min-width: 1000px) {
-    .title{
-    
-      margin-left: 5%;
-    }
-  
-  }
+
+.error-message {
+    color: var(--ion-color-danger);
+}
+
+.mask-password {
+    -webkit-text-security: disc;
+    -moz-webkit-text-security: disc;
+    -moz-text-security: disc;
+}
+

@@ -21,6 +21,9 @@ export class IndexPage{
   
   inputUser:any;
   inputPassword:any;
+  spinner:boolean=false;
+  errors:any;
+  throwError:boolean=false;
   public submit(){
     
     if(this.validateUser(this.username.value, this.password.value)){
@@ -68,10 +71,17 @@ export class IndexPage{
 }
 
 login2(){
+  this.spinner=true;
   this.loginService.login(this.inputUser,this.inputPassword).subscribe((data) => {
    console.log(data);
    this.router.navigateByUrl('tabs');
- });
+ },
+ error => {
+   this.throwError=true;
+  console.log(error);
+  this.errors = error;
+}
+ );
 
  
 }

@@ -1,13 +1,10 @@
-<ion-header >
-  <ion-toolbar color="primary">
-    <ion-title >Bancolombia</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-grid >
   <ion-row>
-    <ion-col size="12">
+    <ion-col size="12" size-lg="6" offset-lg="3">
+         <app-imagen></app-imagen>
       <!-- The login form -->
       <form [formGroup]="loginForm" (ngSubmit)="submit()" padding-right>
         <!-- Inputs -->
@@ -33,12 +30,31 @@
             </ng-container>
           </div>
       </ion-list>
-        <ion-button [disabled]="!loginForm.valid" type="submit" (click)="login2()"expand="block">Ingresar</ion-button>
+    
+        <ion-button [disabled]="!loginForm.valid" type="submit" (click)="login2()"expand="block" color="bluebanco" size="small">Ingresar</ion-button>
       </form>
+   
     </ion-col>
+
   </ion-row>
 
+  <ion-row *ngIf="spinner">
+    <ion-col size="12" offset="5" offset-lg="6">
+      <ion-spinner *ngIf="!throwError"class="spinner " color="bluebanco" name="bubbles" ></ion-spinner>
 
+
+    </ion-col>
+    <ion-col size="6"  offset-lg="5" size-lg="12">
+    
+
+      <ion-badge color="danger"*ngIf="throwError">{{this.errors.error.error}}</ion-badge>
+    </ion-col>
+
+   
+  </ion-row>
+
+   
 </ion-grid>
+
 
 </ion-content>

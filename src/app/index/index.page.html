@@ -5,6 +5,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1> ¡Bienvenido!</h1>
-  <app-imagen></app-imagen>
+  <ion-grid >
+  <ion-row>
+    <ion-col size="12">
+      <!-- The login form -->
+      <form [formGroup]="loginForm" (ngSubmit)="submit()" padding-right>
+        <!-- Inputs -->
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Ingresa el nombre de usuario</ion-label>
+            <ion-input type="text" formControlName="username" required [(ngModel)]="inputUser"></ion-input>
+          </ion-item>
+          <!-- Inputs validations according to the Input validators logic -->
+          <div *ngFor="let error of errorMessages.username">
+            <ng-container *ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+          <ion-item>
+            <ion-label position="floating">Ingresa la contraseña del cajero</ion-label>
+            <ion-input type="text" formControlName="password" class="mask-password" maxlength=24 required [(ngModel)]="inputPassword"></ion-input>
+          </ion-item>
+          <!-- Inputs validations according to the Input validators logic -->
+          <div *ngFor="let error of errorMessages.password">
+            <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+      </ion-list>
+        <ion-button [disabled]="!loginForm.valid" type="submit" (click)="login2()"expand="block">Ingresar</ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>
+
 </ion-content>

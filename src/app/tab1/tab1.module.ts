@@ -9,13 +9,15 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { ImagenComponent } from '../imagen/imagen.component';
 
 
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     ReactiveFormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    
   ],
   declarations: [Tab1Page, ImagenComponent]
 })

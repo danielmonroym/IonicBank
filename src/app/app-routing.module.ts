@@ -17,7 +17,8 @@ const routes: Routes = [
   {
     path: 'confirmarconsignacion',
     loadChildren: () => import('./confirmarconsignacion/confirmarconsignacion.module').then( m => m.ConfirmarconsignacionPageModule)
-  },  {
+  }, 
+  {
     path: 'asesoria',
     loadChildren: () => import('./asesoria/asesoria.module').then( m => m.AsesoriaPageModule)
   },

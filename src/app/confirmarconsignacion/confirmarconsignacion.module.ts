@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ConfirmarconsignacionPageRoutingModule } from './confirmarconsignacion-routing.module';
 
 import { ConfirmarconsignacionPage } from './confirmarconsignacion.page';
+import { ImagenComponent } from '../imagen/imagen.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ConfirmarconsignacionPage } from './confirmarconsignacion.page';
     IonicModule,
     ConfirmarconsignacionPageRoutingModule
   ],
-  declarations: [ConfirmarconsignacionPage]
+  declarations: [ConfirmarconsignacionPage, ImagenComponent]
 })
 export class ConfirmarconsignacionPageModule {}

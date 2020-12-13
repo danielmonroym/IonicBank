@@ -26,6 +26,19 @@ const routes: Routes = [
     path: 'confirmarasesoria',
     loadChildren: () => import('./confirmarasesoria/confirmarasesoria.module').then( m => m.ConfirmarasesoriaPageModule)
   },
+  {
+    path: 'retiro',
+    loadChildren: () => import('./retiro/retiro.module').then( m => m.RetiroPageModule)
+  },
+  {
+    path: 'recaudos',
+    loadChildren: () => import('./recaudos/recaudos.module').then( m => m.RecaudosPageModule)
+  },
+  {
+    path: 'traslado',
+    loadChildren: () => import('./traslado/traslado.module').then( m => m.TrasladoPageModule)
+  },
+
 
 
 ];

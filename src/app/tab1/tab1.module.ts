@@ -19,6 +19,6 @@ import { ImagenComponent } from '../imagen/imagen.component';
     Tab1PageRoutingModule,
     
   ],
-  declarations: [Tab1Page, ImagenComponent]
+  declarations: [Tab1Page]
 })
 export class Tab1PageModule {}

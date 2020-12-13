@@ -16,6 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
 
   ],
-  declarations: [IndexPage, ImagenComponent ]
+  declarations: [IndexPage ]
 })
 export class IndexPageModule {}

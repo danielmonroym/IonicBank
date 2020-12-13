@@ -5,5 +5,7 @@ export class Login{
     email:string;
     password:string;
     nrodecuenta:string;
-
+    data: {
+        token:string
+    };
 }

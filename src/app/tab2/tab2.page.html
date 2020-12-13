@@ -11,7 +11,7 @@
       <ion-col size="12">
         <ion-item class="ion-margin-top">
           <ion-label color="bluebanco">Seleccione su opción</ion-label>
-          <ion-select value="opciones" interface="action-sheet" cancel-text="Cancelar">
+          <ion-select value="opciones" interface="action-sheet" cancel-text="Cancelar" [(ngModel)]="selectedValue">
           
             <ion-select-option value="Recaudos" >Recaudos</ion-select-option>
             <ion-select-option value="Consignación">Consignación</ion-select-option>
@@ -21,7 +21,7 @@
         </ion-item>
       </ion-col>
       <ion-col size="12" offset="4">
-        <ion-button routerLink="/consignacion" color="bluebanco" class="margin-button">
+        <ion-button  [disabled]="this.selectedValue==undefined"(click)="getValue()" color="bluebanco" class="margin-button">
           Confirmar
         </ion-button>
       </ion-col>

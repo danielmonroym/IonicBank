@@ -1,8 +1,11 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import {FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import jwt_decode   from 'jwt-decode';
+import { TokenService } from '../services/token.service';
 @Component({
   selector: 'app-index',
   templateUrl: './index.page.html',
@@ -17,13 +20,15 @@ export class IndexPage{
   });
 
   
-  constructor(private formBuilder: FormBuilder, private loginService:LoginService, public router:Router) {}
+  constructor(private formBuilder: FormBuilder, private loginService:LoginService, public router:Router, private tokenService: TokenService) {}
   
   inputUser:any;
   inputPassword:any;
   spinner:boolean=false;
   errors:any;
   throwError:boolean=false;
+  decodedToken:any;
+  token:any;
   public submit(){
     
     if(this.validateUser(this.username.value, this.password.value)){
@@ -73,8 +78,10 @@ export class IndexPage{
 login2(){
   this.spinner=true;
   this.loginService.login(this.inputUser,this.inputPassword).subscribe((data) => {
-   console.log(data);
-   this.router.navigateByUrl('tabs');
+   this.token= data.data.token;
+   this.tokenService.setToken(this.token);
+   console.log(this.tokenService.getToken());
+   this.router.navigate(['/tabs']);
  },
  error => {
    this.throwError=true;

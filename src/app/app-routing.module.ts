@@ -37,7 +37,19 @@ const routes: Routes = [
   {
     path: 'traslado',
     loadChildren: () => import('./traslado/traslado.module').then( m => m.TrasladoPageModule)
+  },  {
+    path: 'confirmarretiro',
+    loadChildren: () => import('./confirmarretiro/confirmarretiro.module').then( m => m.ConfirmarretiroPageModule)
   },
+  {
+    path: 'confirmartraslado',
+    loadChildren: () => import('./confirmartraslado/confirmartraslado.module').then( m => m.ConfirmartrasladoPageModule)
+  },
+  {
+    path: 'confirmarrecaudo',
+    loadChildren: () => import('./confirmarrecaudo/confirmarrecaudo.module').then( m => m.ConfirmarrecaudoPageModule)
+  },
+
 
 
 

@@ -54,7 +54,7 @@
         
       </ion-col>
       <ion-col size="12" offset="4">
-        <ion-button routerLink="/confirmarconsignacion" color="bluebanco" class="margin-button" [disabled]="showBadge" >
+        <ion-button (click)="getQRData()" color="bluebanco" class="margin-button" [disabled]="showBadge" >
           Confirmar
         </ion-button>
         <ion-button routerLink="/tabs" color="bluebanco" >

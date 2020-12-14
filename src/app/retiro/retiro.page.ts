@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenService } from '../services/token.service';
 import jwt_decode   from 'jwt-decode';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-retiro',
   templateUrl: './retiro.page.html',
@@ -16,7 +18,7 @@ export class RetiroPage implements OnInit {
   selectedValue:any;
   montoDisabled:boolean;
   showBadge:boolean;
-  constructor(private tokenService:TokenService) { }
+  constructor(private tokenService:TokenService, public router:Router, public dataService:DataService) { }
 
   ngOnInit() {
     this.tokenValidation=this.tokenService.getToken();
@@ -48,4 +50,15 @@ export class RetiroPage implements OnInit {
    }
 
   }
+
+  getQRData(){
+    let dataObject= {
+      qrData1: this.input1,
+      qrData2: this.input2,
+      qrData3: this.input3,
+      qrData4: this.selectedValue
+    }
+   this.dataService.setParamData(dataObject);
+   this.router.navigateByUrl('confirmarretiro')
+ }
 }

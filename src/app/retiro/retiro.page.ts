@@ -11,10 +11,11 @@ export class RetiroPage implements OnInit {
   decodedToken:any;
   input1:any;
   input2:any;
-  input3:number;
+  input3:number=0;
   input4:any;
-
-
+  selectedValue:any;
+  montoDisabled:boolean;
+  showBadge:boolean;
   constructor(private tokenService:TokenService) { }
 
   ngOnInit() {
@@ -25,7 +26,26 @@ export class RetiroPage implements OnInit {
     console.log(this.input1);
     this.input2=this.decodedToken.ownerId;
     this.input4=this.decodedToken.ownerAccounts;
+    console.log(this.selectedValue);
+    if(this.selectedValue==undefined){
+      this.montoDisabled=true;
+    }
+    
+  
 
   }
 
+  changeSelected():void{
+   this.montoDisabled=false;
+   console.log(this.selectedValue)
+  }
+
+  verificarMonto():void{
+   if(this.input3>=this.selectedValue || this.input3>=this.decodedToken.maxTransferAmount){
+       this.showBadge=true;
+   }else{ 
+    this.showBadge=false;
+   }
+
+  }
 }

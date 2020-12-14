@@ -24,7 +24,7 @@ export class RetiroPage implements OnInit {
     this.input1=this.decodedToken.ownerName;
     console.log(this.input1);
     this.input2=this.decodedToken.ownerId;
-    this.input4=this.decodedToken.ownerAccounts[0].accountId;
+    this.input4=this.decodedToken.ownerAccounts;
 
   }
 

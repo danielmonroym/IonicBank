@@ -9,56 +9,85 @@
     <ion-row>
 
       <ion-col size="12">
-        <app-imagen></app-imagen>
       </ion-col>
       <ion-col size="12">
-        <ion-title color="bluebanco" class="ion-margin-top">Información de tu consignación</ion-title>
+        <ion-title color="bluebanco" class="ion-margin-top">Información de su consignacion</ion-title>
       </ion-col>
       <ion-col size="12" class="ion-margin-top">
-     
+
+        <ion-col size="12">
+
+          <ion-item>
+            <ion-label color="bluebanco">Nro cuenta origen:</ion-label>
+            <ion-select placeholder="Seleccione una" [(ngModel)]="selectedValue" (ngModelChange)="changeSelected()">
+              <ion-select-option *ngFor="let item of input4" value={{item.balance}}> {{item.accountType}}
+              </ion-select-option>
+
+            </ion-select>
+          </ion-item>
+
+        </ion-col>
+
+        <ion-col size="12">
+
         <ion-item>
-          <ion-label position="floating" color="bluebanco">Input</ion-label>
-          <ion-input></ion-input>
+          <ion-label position="floating" color="bluebanco">Nro cuenta destino:</ion-label>
+          <ion-input [(ngModel)]="inputdes">
+          </ion-input>
         </ion-item>
-        
-     
+
       </ion-col>
-      <ion-col size="12" >
-     
+
+
         <ion-item>
-          <ion-label position="floating" color="bluebanco">Input</ion-label>
-          <ion-input></ion-input>
+          <ion-label color="bluebanco">Titular cuenta origen:</ion-label>
+          <ion-label>{{input1}}</ion-label>
         </ion-item>
-        
-     
+
+
       </ion-col>
       <ion-col size="12">
-     
+
+
         <ion-item>
-          <ion-label position="floating" color="bluebanco" >Input</ion-label>
-          <ion-input></ion-input>
+          <ion-label color="bluebanco">Documento:</ion-label>
+          <ion-label>{{input2}}</ion-label>
         </ion-item>
-        
-     
+
+
       </ion-col>
       <ion-col size="12">
-     
+
         <ion-item>
-          <ion-label position="floating" color="bluebanco">Input</ion-label>
-          <ion-input></ion-input>
+          <ion-label position="floating" color="bluebanco">Monto</ion-label>
+          <ion-input [(ngModel)]="input3" type="number" *ngIf="!montoDisabled" (ngModelChange)="verificarMonto()">
+          </ion-input>
         </ion-item>
-        
+
+
       </ion-col>
+
+      <ion-col size="12">
+      <ion-item>
+        <ion-label color="bluebanco">Tipo de pago</ion-label>
+        <ion-select placeholder="Seleccione uno" [(ngModel)]="selectedPago">
+          <ion-select-option value="Efectivo">Efectivo</ion-select-option>
+          <ion-select-option value="Cheque">Cheque</ion-select-option>
+          <ion-select-option value="Tarjeta">Tarjeta</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+ 
       <ion-col size="12" offset="4">
-        <ion-button routerLink="/confirmarconsignacion" color="bluebanco" class="margin-button" >
+        <ion-button (click)="getQRData()" color="bluebanco" class="margin-button" [disabled]="showBadge">
           Confirmar
         </ion-button>
-        <ion-button routerLink="/tabs/tab1" color="bluebanco" >
+        <ion-button routerLink="/tabs" color="bluebanco">
           Volver
         </ion-button>
       </ion-col>
-      <ion-col size="12" offset="4">
-    
+      <ion-col size="12" offset="1">
+        <ion-badge color="danger" *ngIf="showBadge">El monto supera su balance o la transferencia máxima</ion-badge>
       </ion-col>
     </ion-row>
   </ion-grid>

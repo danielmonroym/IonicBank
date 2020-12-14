@@ -18,7 +18,15 @@
         </div>
       </ion-col>
       <ion-col size="12">
-        <img src="../../assets/img/qrcode.png" alt="QR" class="imgqr" />
+        <ion-card *ngIf="qrResult">
+          
+          <ngx-qrcode  [value]="qrResult">
+          </ngx-qrcode>
+ 
+          <ion-card-content>
+              Value: {{ qrResult}}
+          </ion-card-content>
+      </ion-card>
       </ion-col>
     </ion-row>
 

@@ -5,7 +5,7 @@ import { Login } from "../modelo/login";
   providedIn: 'root'
 })
 export class LoginService {
-  url='http://ec2-52-90-147-214.compute-1.amazonaws.com:3001/api/';
+  url='https://bc17cfyn3h.execute-api.us-east-1.amazonaws.com/api/';
 
   constructor(private http:HttpClient) { 
 

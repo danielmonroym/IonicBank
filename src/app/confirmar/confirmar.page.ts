@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 
 @Component({
-  selector: 'app-confirmarconsignacion',
-  templateUrl: './confirmarconsignacion.page.html',
-  styleUrls: ['./confirmarconsignacion.page.scss'],
+  selector: 'app-confirmar',
+  templateUrl: './confirmar.page.html',
+  styleUrls: ['./confirmar.page.scss'],
 })
-export class ConfirmarconsignacionPage implements OnInit {
+export class ConfirmarPage implements OnInit {
   createdCode = null;
   scannedCode = null;
   paramData=null;

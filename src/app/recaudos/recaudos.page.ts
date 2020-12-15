@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { TokenService } from '../services/token.service';
 import jwt_decode from 'jwt-decode';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-recaudos',
@@ -90,7 +89,7 @@ export class RecaudosPage implements OnInit {
     }
     console.log(dataObject);
     this.dataService.setParamData(dataObject);
-    this.router.navigateByUrl('confirmarrecaudo')
+    this.router.navigateByUrl('confirmar')
   }
 
 }

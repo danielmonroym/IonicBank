@@ -15,16 +15,8 @@ const routes: Routes = [
     loadChildren: () => import('./consignacion/consignacion.module').then( m => m.ConsignacionPageModule)
   },
   {
-    path: 'confirmarconsignacion',
-    loadChildren: () => import('./confirmarconsignacion/confirmarconsignacion.module').then( m => m.ConfirmarconsignacionPageModule)
-  }, 
-  {
     path: 'asesoria',
     loadChildren: () => import('./asesoria/asesoria.module').then( m => m.AsesoriaPageModule)
-  },
-  {
-    path: 'confirmarasesoria',
-    loadChildren: () => import('./confirmarasesoria/confirmarasesoria.module').then( m => m.ConfirmarasesoriaPageModule)
   },
   {
     path: 'retiro',
@@ -39,19 +31,12 @@ const routes: Routes = [
     loadChildren: () => import('./traslado/traslado.module').then( m => m.TrasladoPageModule)
   },
   {
-    path: 'confirmarretiro',
-    loadChildren: () => import('./confirmarretiro/confirmarretiro.module').then( m => m.ConfirmarretiroPageModule)
-  },
-  {
-    path: 'confirmartraslado',
-    loadChildren: () => import('./confirmartraslado/confirmartraslado.module').then( m => m.ConfirmartrasladoPageModule)
-  },
-  {
-    path: 'confirmarrecaudo',
-    loadChildren: () => import('./confirmarrecaudo/confirmarrecaudo.module').then( m => m.ConfirmarrecaudoPageModule)
+    path: 'confirmar',
+    loadChildren: () => import('./confirmar/confirmar.module').then( m => m.ConfirmarPageModule)
   },
 
 
+ 
 
 
 

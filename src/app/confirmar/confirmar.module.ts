@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
- 
+
 import { IonicModule } from '@ionic/angular';
 
-import { ConfirmarconsignacionPageRoutingModule } from './confirmarconsignacion-routing.module';
+import { ConfirmarPageRoutingModule } from './confirmar-routing.module';
 
-import { ConfirmarconsignacionPage } from './confirmarconsignacion.page';
+import { ConfirmarPage } from './confirmar.page';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { ImagenComponent } from '../imagen/imagen.component';
 
@@ -15,9 +15,9 @@ import { ImagenComponent } from '../imagen/imagen.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    ConfirmarconsignacionPageRoutingModule,
+    ConfirmarPageRoutingModule,
     NgxQRCodeModule 
   ],
-  declarations: [ConfirmarconsignacionPage, ImagenComponent]
+  declarations: [ConfirmarPage, ImagenComponent]
 })
-export class ConfirmarconsignacionPageModule {}
+export class ConfirmarPageModule {}

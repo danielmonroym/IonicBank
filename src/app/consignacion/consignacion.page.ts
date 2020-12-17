@@ -25,6 +25,9 @@ export class ConsignacionPage implements OnInit {
   constructor(private tokenService: TokenService, public router: Router, public dataService: DataService) { }
 
   ngOnInit() {
+    console.log(this.tokenService.getToken());
+    if(this.tokenService.getToken()!= undefined){
+
     this.tokenValidation = this.tokenService.getToken();
     this.decodedToken = jwt_decode(this.tokenValidation);
     console.log(this.decodedToken);
@@ -36,7 +39,12 @@ export class ConsignacionPage implements OnInit {
     if (this.selectedValue == undefined) {
       this.montoDisabled = true;
     }
+  }
+  else{
 
+    this.router.navigateByUrl('index');
+
+  }
   }
 
   changeSelected(): void {

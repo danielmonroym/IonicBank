@@ -7,7 +7,8 @@ import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
-import { ImagenComponent } from '../imagen/imagen.component';
+import { ComponentsModule } from '../components.module';
+
  
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { ImagenComponent } from '../imagen/imagen.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    ComponentsModule
   ],
-  declarations: [Tab2Page, ImagenComponent]
+  declarations: [Tab2Page]
 })
 export class Tab2PageModule {}

@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IndexPageRoutingModule } from './index-routing.module';
 import { IndexPage } from './index.page';
-import { ImagenComponent } from '../imagen/imagen.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     IonicModule,
     IndexPageRoutingModule,
     ReactiveFormsModule,
+    ComponentsModule
 
   ],
   declarations: [IndexPage ]

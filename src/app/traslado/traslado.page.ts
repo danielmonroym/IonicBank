@@ -22,6 +22,7 @@ export class TrasladoPage implements OnInit {
   constructor(private tokenService:TokenService, public router:Router, public dataService:DataService) { }
   
   ngOnInit() {
+    if(this.tokenService.getToken()!= undefined){
     this.tokenValidation=this.tokenService.getToken();
     this.decodedToken= jwt_decode(this.tokenValidation);
     console.log(this.decodedToken);
@@ -33,7 +34,9 @@ export class TrasladoPage implements OnInit {
     if(this.selectedValue==undefined){
       this.montoDisabled=true;
     }
-    
+  }else{
+    this.router.navigateByUrl('index')
+  }
   
 
   }

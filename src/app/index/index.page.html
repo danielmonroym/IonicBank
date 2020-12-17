@@ -4,7 +4,7 @@
   <ion-grid >
   <ion-row>
     <ion-col size="12" size-lg="6" offset-lg="3">
-      <!--    <app-imagen></app-imagen> -->
+        <app-imagen></app-imagen> 
       <!-- The login form -->
       <form [formGroup]="loginForm" (ngSubmit)="submit()" padding-right>
         <!-- Inputs -->
@@ -21,7 +21,7 @@
           </div>
           <ion-item>
             <ion-label position="floating">Ingresa la contraseña del cajero</ion-label>
-            <ion-input type="text" formControlName="password" class="mask-password" maxlength=24 required [(ngModel)]="inputPassword"></ion-input>
+            <ion-input type="password" formControlName="password" class="mask-password" maxlength=24 required [(ngModel)]="inputPassword"></ion-input>
           </ion-item>
           <!-- Inputs validations according to the Input validators logic -->
           <div *ngFor="let error of errorMessages.password">

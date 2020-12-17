@@ -28,6 +28,7 @@ export class RecaudosPage implements OnInit {
   constructor(private tokenService: TokenService, public router: Router, public dataService: DataService) { }
 
   ngOnInit() {
+    if(this.tokenService.getToken()!= undefined){
     this.tokenValidation = this.tokenService.getToken();
     this.decodedToken = jwt_decode(this.tokenValidation);
     this.input3 = this.decodedToken.ownerName;
@@ -37,6 +38,9 @@ export class RecaudosPage implements OnInit {
       this.montoDisabled = true;
       this.activateAccountSelector = false;
     }
+  } else{
+    this.router.navigateByUrl('index')
+  }
   }
 
   verifyBalance(): void {

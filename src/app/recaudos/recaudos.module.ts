@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecaudosPageRoutingModule } from './recaudos-routing.module';
 
 import { RecaudosPage } from './recaudos.page';
+import { ComponentsModule } from '../components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecaudosPageRoutingModule
+    RecaudosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [RecaudosPage]
 })

@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { ConfirmarPageRoutingModule } from './confirmar-routing.module';
-
 import { ConfirmarPage } from './confirmar.page';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { ImagenComponent } from '../imagen/imagen.component';
+import { ComponentsModule } from '../components.module';
+
 
 @NgModule({
   imports: [
@@ -16,8 +14,9 @@ import { ImagenComponent } from '../imagen/imagen.component';
     FormsModule,
     IonicModule,
     ConfirmarPageRoutingModule,
-    NgxQRCodeModule 
+    NgxQRCodeModule,
+    ComponentsModule
   ],
-  declarations: [ConfirmarPage, ImagenComponent]
+  declarations: [ConfirmarPage]
 })
 export class ConfirmarPageModule {}

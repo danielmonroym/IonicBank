@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TrasladoPageRoutingModule } from './traslado-routing.module';
 
 import { TrasladoPage } from './traslado.page';
+import { ComponentsModule } from '../components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TrasladoPageRoutingModule
+    TrasladoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TrasladoPage]
 })

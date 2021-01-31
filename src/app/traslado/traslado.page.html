@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="bancolombia" size="large">
-    <ion-title color="bluebanco">Consignación</ion-title>
+    <ion-title color="bluebanco">Traslado de efectivo</ion-title> 
   </ion-toolbar>
 </ion-header>
 
@@ -34,15 +34,6 @@
      
       </ion-col>
       <ion-col size="12">
-     
-        <ion-item>
-          <ion-label position="floating" color="bluebanco" >Monto</ion-label>
-          <ion-input [(ngModel)]="input3" type="number" *ngIf="!montoDisabled" (ngModelChange)="verificarMonto()"></ion-input>
-        </ion-item>
-        
-     
-      </ion-col>
-      <ion-col size="12">
       
         <ion-item>
           <ion-label color="bluebanco">Nro Cuenta:</ion-label>
@@ -62,6 +53,16 @@
           </ion-input>
         </ion-item>
 
+      </ion-col>
+
+      <ion-col size="12">
+     
+        <ion-item>
+          <ion-label position="floating" color="bluebanco" >Monto</ion-label>
+          <ion-input [(ngModel)]="input3" type="number" *ngIf="!montoDisabled" (ngModelChange)="verificarMonto()"></ion-input>
+        </ion-item>
+        
+     
       </ion-col>
 
       <ion-col size="12" offset="4">

@@ -10,22 +10,20 @@
       <ion-col size="12">
         <app-imagen></app-imagen>
       </ion-col>
-      <ion-col size="12" offset-lg="4" class="ion-margin-top">
+      <ion-col size="12" offset-lg="4" offset="1" class="ion-margin-top">
         <div class="ion-text-wrap">
           <ion-text color="bluebanco" style="margin-left: 43%;">
             <h3>Presenta este código en caja</h3>
           </ion-text>
         </div>
       </ion-col>
-      <ion-col size="12">
+      <ion-col size="6" offset="3">
         <ion-card *ngIf="qrResult">
           
           <ngx-qrcode  [value]="qrResult">
           </ngx-qrcode>
 
-          <ion-card-content>
-              Value: {{ qrResult}}
-          </ion-card-content>
+        
       </ion-card>
       </ion-col>
     </ion-row>

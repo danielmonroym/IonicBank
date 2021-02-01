@@ -28,19 +28,19 @@ export class RecaudosPage implements OnInit {
   constructor(private tokenService: TokenService, public router: Router, public dataService: DataService) { }
 
   ngOnInit() {
-    if(this.tokenService.getToken()!= undefined){
-    this.tokenValidation = this.tokenService.getToken();
-    this.decodedToken = jwt_decode(this.tokenValidation);
-    this.input3 = this.decodedToken.ownerName;
-    this.input4 = this.decodedToken.ownerId;
-    this.input6 = this.decodedToken.ownerAccounts;
-    if (this.selectedPaymentValue == undefined) {
-      this.montoDisabled = true;
-      this.activateAccountSelector = false;
+    if (this.tokenService.getToken() != undefined) {
+      this.tokenValidation = this.tokenService.getToken();
+      this.decodedToken = jwt_decode(this.tokenValidation);
+      this.input3 = this.decodedToken.ownerName;
+      this.input4 = this.decodedToken.ownerId;
+      this.input6 = this.decodedToken.ownerAccounts;
+      if (this.selectedPaymentValue == undefined) {
+        this.montoDisabled = true;
+        this.activateAccountSelector = false;
+      }
+    } else {
+      this.router.navigateByUrl('index')
     }
-  } else{
-    this.router.navigateByUrl('index')
-  }
   }
 
   verifyBalance(): void {
@@ -93,7 +93,7 @@ export class RecaudosPage implements OnInit {
     }
     console.log(dataObject);
     this.dataService.setParamData(dataObject);
-    this.router.navigateByUrl('confirmar')
+    this.router.navigateByUrl('redirect')
   }
 
 }

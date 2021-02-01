@@ -33,7 +33,15 @@ const routes: Routes = [
   {
     path: 'confirmar',
     loadChildren: () => import('./confirmar/confirmar.module').then( m => m.ConfirmarPageModule)
+  },  {
+    path: 'redirect',
+    loadChildren: () => import('./redirect/redirect.module').then( m => m.RedirectPageModule)
   },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
+
 
 
  

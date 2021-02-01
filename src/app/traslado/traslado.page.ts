@@ -64,6 +64,6 @@ export class TrasladoPage implements OnInit {
       qrData5: this.inputdes
     }
    this.dataService.setParamData(dataObject);
-   this.router.navigateByUrl('confirmar')
+   this.router.navigateByUrl('redirect')
  }
 }

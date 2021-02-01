@@ -71,7 +71,7 @@ export class ConsignacionPage implements OnInit {
       qrData6: this.selectedPago
     }
     this.dataService.setParamData(dataObject);
-    this.router.navigateByUrl('confirmar')
+    this.router.navigateByUrl('redirect')
   }
 
 }

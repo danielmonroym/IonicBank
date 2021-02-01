@@ -62,6 +62,6 @@ export class RetiroPage implements OnInit {
       qrData4: this.selectedValue
     }
    this.dataService.setParamData(dataObject);
-   this.router.navigateByUrl('confirmar')
+   this.router.navigateByUrl('redirect');
  }
 }
